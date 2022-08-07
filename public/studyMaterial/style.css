@@ -85,10 +85,17 @@ a{
     top: 10px;
     height: 90%;
     width: 85%;
-    
+    overflow: hidden;
+}
+
+.video{
+    width: 240px;
+    height: 110px;
+
 }
 
 .videocont{
+    overflow: hidden;
     margin: 10px;
     /* background-color: rgb(0, 0, 0,0.1); */
     display: inline-flex;

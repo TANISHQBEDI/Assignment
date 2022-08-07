@@ -38,25 +38,38 @@
                         <div class="videotitlecont">
                             video title
                         </div>
-                    </div>
+                    </div>                        
                     <div class="videocont">
                         iframe here
                         <div class="videotitlecont">
                             video title
                         </div>
-                    </div>
+                    </div>                        
                     <div class="videocont">
                         iframe here
                         <div class="videotitlecont">
                             video title
                         </div>
-                    </div>
-                    
-                        
-                        
+                    </div>                        
                 </div>
             </div>
         </div>
     </div>
+    <script>
+        function videocard()
+        {
+            const contentborder=document.querySelector('.contentborder')
+            const newvideocont=document.createElement('DIV')
+            newvideocont.className='videocont'
+            const newiframe=document.createElement('IFRAME')
+            newiframe.className='video'
+            const newtitlecont=document.createElement('DIV')
+            newtitlecont.className='videotitlecont'
+            contentborder.appendChild(newvideocont)
+            newvideocont.appendChild(newiframe)
+            newvideocont.appendChild(newtitlecont)
+        }
+        // videocard()
+    </script>
 </body>
 </html>

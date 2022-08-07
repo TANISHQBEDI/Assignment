@@ -71,10 +71,14 @@
             newteacherprofilecont.className='teacherprofilecont';
             const newdp=document.createElement('DIV');
             newdp.className='dp';
+            const newimg=document.createElement('IMG')
+            
             const newdet=document.createElement('DIV');
             newdet.className='det';
+
             contentborder.appendChild(newteacherprofilecont);
             newteacherprofilecont.appendChild(newdp);
+            newdp.appendChild(newimg)
             newteacherprofilecont.appendChild(newdet);
         }
         for (let index = 0; index < 10; index++) {
