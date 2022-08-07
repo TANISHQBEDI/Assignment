@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="backgr">
+        <div class="headercont">
+            <div class="logocont">
+                <!-- <div>Logo</div> -->
+                <span>Logo</span>
+            </div>
+            <div class="navbarcont">
+                    <nav>
+                        <ul>
+                            <li>
+                                <a href="/studyMaterial">Study Material</a>
+                            </li>
+                            <li>
+                                <a href="/Register">Login</a>
+                            </li>
+                            <li>
+                                <a href="/">Home</a>
+                            </li>
+                        </ul>
+                    </nav>
+            </div>
+        </div>
+        <div class="bodycont">
+            <div class="mainbody">
+                <div class="contentborder">
+                    <div class="personaldetcont">
+                        <form>
+                            <div>
+                                NAME   <input type="text" name="name" id="name" placeholder="NAME" required>
+                            </div>
+                            <div>
+                                EMAIL  <input type="email" name="email" id="email" placeholder="EMAIL" required>
+                            </div>
+                            <div>
+                                SELECT MODE OF LEARNING <select name="typeOfBooking" id="mode" required onchange="changePlaceHolder();">
+                                                            <option value="online">Online</option>
+                                                            <option value="offline">Offline</option>
+                                                        </select>
+                            </div>
+                            <div>
+                                DATE  <input type="date" name="date" id="date">
+                            </div>
+                            <div>
+                                SELECT SESSION DURATION <select name="duration" id="duration" required onchange="changePlaceHolder();">
+                                                            <option value=1>1</option>
+                                                            <option value=2>2</option>
+                                                            <option value=3>3</option>
+                                                        </select>
+                            </div>
+                            <div>
+                                COST  <input type="text" id="cost" name="cost" readonly>
+                            </div>
+                            
+                        </form>  
+                    </div>
+                    <div class="carddetcont">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script>
+        
+        function changePlaceHolder() 
+        {
+            let mode=document.getElementById('mode').value
+            let cost
+            let cost1=document.getElementById('cost')
+            let finalcost
+            if(mode=="offline")
+            {
+                cost=1100
+            }
+            else
+            {
+                cost=1000
+            }
+            console.log(mode)
+            let dur=document.getElementById('duration').value
+            console.log(dur)
+            if (dur==1) 
+            {
+                console.log(cost)
+                finalcost=cost*(1.1)
+                console.log(finalcost)
+            } 
+            else if(dur==2)
+            {
+                console.log(cost)
+                finalcost=cost*(1.2)
+                console.log(finalcost)
+            }
+            else
+            {
+                console.log(cost)
+                finalcost=cost*1.3
+                console.log(finalcost)
+            }
+            
+            jQuery(cost1).attr("placeholder",finalcost)
+
+        }
+    </script>
+</body>
+</html>

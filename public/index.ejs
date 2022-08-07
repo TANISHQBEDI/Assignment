@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+</head>
+<body>
+    <div class="backgr">
+        <div class="headercont">
+            <div class="logocont">
+                <!-- <div>Logo</div> -->
+                <span>Logo</span>
+            </div>
+            <div class="navbarcont">
+                    <nav>
+                        <ul>
+                            <li>
+                                <a href="/studyMaterial">Study Material</a>
+                            </li>
+                            <li>
+                                <a href="#"><% if(username!= undefined){ %>
+                                    <span onclick="userlogout()"><%=username%></span>
+                                    <% }else{ %> <a href="/register">Login</a> 
+                                    <%}%></a>
+                            </li>
+                            <li>
+                                <a href="/">Home</a>
+                            </li>
+                        </ul>
+                    </nav>
+            </div>
+        </div>
+        <div class="bodycont">
+            <div class="mainbody">
+                <div class="contentborder">
+                    Welcome students. 
+                    <br>
+                    Here you can get in touch with our teachers and solve your queries. You can book for an Online session or for an Offline session.
+                    <br>
+                    You can also access our Library for free lectures.
+                    <br>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus, praesentium delectus magni aliquam eos exercitationem unde ad nostrum laudantium corporis repudiandae dolor rem ut totam id quos dicta in consectetur obcaecati voluptas? Deleniti reprehenderit magnam amet voluptas similique mollitia ducimus veniam ad explicabo consequatur voluptatum optio totam necessitatibus quae quis eius beatae molestias facere maxime, aspernatur non commodi praesentium ea nam? Cum tenetur pariatur in commodi veniam distinctio? Debitis iste commodi accusamus nostrum fugit neque, ratione rerum eligendi aliquid dolores aut dolorem libero exercitationem ex voluptatem! Vitae neque incidunt veniam error quaerat unde sed debitis, fugiat cumque quibusdam? Nisi, consequatur!
+                    <br>
+                    <br>
+                    <div class="teacherprofilecont">
+                        <div class="dp">
+                            <img src="https://w0.peakpx.com/wallpaper/6/665/HD-wallpaper-alienware-3d-logo-metal-background.jpg" alt="">
+                        </div>
+                        <div class="det">
+                            Name :
+                            <br>
+                            Subject :
+                            <br>
+                            Fee :
+                            <br>
+                            Qualifications :
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var userlogout=function()
+        {
+            window.location='/logout';
+            alert("Logged out");
+        }
+    </script>
+</body>
+</html>
