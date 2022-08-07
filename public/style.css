@@ -2,6 +2,9 @@ body{
     margin: 0;
     color: rgb(255, 255, 255);
     font-family: 'Open Sans', sans-serif;
+    background-color: #181818;
+    overflow-x: hidden;
+    /* overflow-y: hidden ; */
 }
 
 a{
@@ -83,11 +86,15 @@ a{
     top: 10px;
     height: fit-content;
     width: 80%;
+    overflow: hidden;
 }
 
 .teacherprofilecont{
+    display: inline-block;
+    margin: 5px;
+    overflow: hidden;
     height: 300px;
-    width: 200px;
+    width: 250px;
     background-color: rgb(42, 42, 42);
     border-radius: 10px 10px;
     
