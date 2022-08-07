@@ -65,6 +65,25 @@
         </div>
     </div>
     <script>
+        function createcard(){
+            const contentborder=document.querySelector('.contentborder');
+            const teacherprofilecont=document.createElement('DIV');
+            teacherprofilecont.className('teacherprofilecont');
+            const dp=document.createElement('DIV');
+            dp.className('dp');
+            const det=document.createElement('DIV');
+            det.className('det');
+            contentborder.appendChild(teacherprofilecont);
+            teacherprofilecont.appendChild(dp);
+            teacherprofilecont.appendChild(det);
+        }
+        for (let index = 0; index < 10; index++) {
+            
+            createcard();
+        }
+        
+    </script>
+    <script>
         var userlogout=function()
         {
             window.location='/logout';
